@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budgeting Application</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Budgeting Application</h1><hr>
+  
+  <div id="income">
+    <h2>Income</h2><br><br>
+    <input type="number" id="income-input" placeholder="Enter income">
+
+    <button onclick="openExpenseList()">Next</button>
+  </div>
+
+  <div id="expense-list" style="display: none;">
+    
+
+    
+    <h2>Expense List</h2><br><br>
+    <label for="expense-name">Expense Name:</label>
+      <input type="text" id="expense-name" placeholder="Enter expense name" required><br><br>
+  
+      <label for="expense-amount">Expense Amount:</label>
+      <input type="number" id="expense-amount" placeholder="Enter expense amount" required>
+      <input type="hidden" id="myInput" value="">
+
+  
+  
+    <button onclick="addExpense()">Add Expense</button>
+    <button onclick="showSummary()">Show Summary</button>
+    <ul id="expense-ul"></ul>
+  </div>
+
+  <div id="summary" style="display: none;">
+    <h2>Summary</h2><br><br>
+    <p id="income-display"></p>
+    <p id="total-expense-display"></p>
+    <p id="remaining-amount-display"></p>
+  </div>
+
+ 
+</body>
+</html>
